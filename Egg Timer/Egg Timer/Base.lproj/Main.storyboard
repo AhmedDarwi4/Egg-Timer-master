@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Egg_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rgs-93-2GV">
+                                <rect key="frame" x="34" y="407" width="346" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="346" id="EL1-Sp-rpV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Soft"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <connections>
+                                    <action selector="cookingSegmentControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="9GQ-Ub-pYK"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your egg?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfy-C6-O41">
+                                <rect key="frame" x="0.0" y="341" width="414" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Soft" translatesAutoresizingMaskIntoConstraints="NO" id="rCO-ma-a89">
+                                <rect key="frame" x="111" y="94" width="192" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="cOb-LO-dAL"/>
+                                    <constraint firstAttribute="width" constant="192" id="zKL-B5-xxt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8i-Kx-dJD">
+                                <rect key="frame" x="177" y="478" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0BB-5K-RYm"/>
+                                    <constraint firstAttribute="width" constant="60" id="jYa-uV-7Lq"/>
+                                </constraints>
+                                <state key="normal" image="start"/>
+                                <connections>
+                                    <action selector="btnStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3T-Iz-zJA"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V7R-1u-GN0">
+                                <rect key="frame" x="27" y="578" width="360" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="NzV-8w-9D9"/>
+                                    <constraint firstAttribute="width" constant="360" id="VhO-Nk-14t"/>
+                                </constraints>
+                                <color key="progressTintColor" systemColor="labelColor"/>
+                                <color key="trackTintColor" systemColor="systemGray2Color"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.83691487299355971" green="0.9588945182623011" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="N8i-Kx-dJD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Nj-FK-oQF"/>
+                            <constraint firstItem="Rgs-93-2GV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1k1-5l-wOU"/>
+                            <constraint firstItem="Rgs-93-2GV" firstAttribute="top" secondItem="Yfy-C6-O41" secondAttribute="bottom" constant="30" id="51n-fk-iJw"/>
+                            <constraint firstItem="V7R-1u-GN0" firstAttribute="top" secondItem="N8i-Kx-dJD" secondAttribute="bottom" constant="40" id="54k-vT-G6G"/>
+                            <constraint firstItem="rCO-ma-a89" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ddy-5O-gDF"/>
+                            <constraint firstItem="Yfy-C6-O41" firstAttribute="top" secondItem="rCO-ma-a89" secondAttribute="bottom" constant="30" id="HCG-rg-B6M"/>
+                            <constraint firstItem="Yfy-C6-O41" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MBj-UE-PGd"/>
+                            <constraint firstItem="N8i-Kx-dJD" firstAttribute="top" secondItem="Rgs-93-2GV" secondAttribute="bottom" constant="40" id="UPq-zD-JRI"/>
+                            <constraint firstItem="Yfy-C6-O41" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aaw-qd-vE4"/>
+                            <constraint firstItem="V7R-1u-GN0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n9i-Lp-U5q"/>
+                            <constraint firstItem="rCO-ma-a89" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rqR-72-A4z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgvEgg" destination="rCO-ma-a89" id="enW-hg-FSD"/>
+                        <outlet property="lblTitle" destination="Yfy-C6-O41" id="sxF-h7-8QT"/>
+                        <outlet property="progressBar" destination="V7R-1u-GN0" id="cED-Wc-RuX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Soft" width="225" height="316"/>
+        <image name="start" width="236" height="213"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
